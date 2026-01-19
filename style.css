@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: url(images/bodyh.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#content {
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  color: orange;
+}
+
+.lcont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lcont img{
+    width: auto;
+    height: 50px;
+    background-size: cover;
+    border-radius: 20px;
+}
+.loader {
+  margin: 10px;
+  height: 4px;
+  width: 180px;
+  --c:no-repeat linear-gradient(orange 0 0);
+  background: var(--c),var(--c),rgb(248, 217, 158);
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+
+
+
+
+
+
+/* Content  */
+.app img{
+    width: auto;
+    height: 50px;
+    background-size: cover;
+    border-radius: 20px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    width: 60vw;
+    /* min-width: 500px; */
+    background: transparent;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 40px;
+    border: 1px solid black;
+    min-height: 60vh;
+}
+.app h3{
+    color: rgb(255, 166, 0);
+    font-weight: 10;
+    font-size: xx-large;
+    padding-left: 30px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border-radius: 30px;
+    padding-left: 20px;
+    background: wheat;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff9645;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 100;
+}
+button:active{
+    background: #f98c38;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);  
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+ul li{
+    list-style: none;
+    font-size: large;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #707070;
+    display: flex;
+    align-items: center;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(images/unchecked.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color: #c3c3c3;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+ul li  span:hover{
+    background-color: #f29e54;
+}
+
+
+@media (max-width: 600px) {
+ body{
+    background: url(images/bodyh.jpg);
+    background-size: cover;
+ }
+  .app{
+    padding: 25px 20px 40px;
+    border-radius: 24px;
+    width: auto;
+  }
+
+  .title h3{
+    font-size: 22px;
+    padding-left: 15px;
+  }
+
+  .app img{
+    height: 40px;
+  }
+
+  .row{
+    flex-direction: row;
+  }
+
+  button{
+    
+    border-radius: 30px;
+  }
+
+  ul li{
+    font-size: 16px;
+    padding-left: 45px;
+  }
+
+  ul li span{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .loader{
+    width: 140px;
+  }
+
+  .lmsg{
+    font-size: 14px;
+  }
+}
