@@ -3,7 +3,7 @@ const licont = document.getElementById("licont");
 
 
 document.addEventListener("DOMContentLoaded",()=>{
-    showsaved();
+    showsavedtodo();
     setTimeout(()=>{
         document.getElementById("loader").style.display = "none";
         document.getElementById("content").style.display = "block";
@@ -33,26 +33,27 @@ function addtask() {
     licont.appendChild(li);
 
     inputbox.value = "";
-    save();
+    savetodo();
 }
 
 licont.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
-        save();
+        savetodo();
     } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
-        save();
+        savetodo();
     }
 });
 
-function save() {
+function savetodo() {
     localStorage.setItem("localdata", licont.innerHTML);
 }
 
-function showsaved() {
+function showsavedtodo() {
     licont.innerHTML = localStorage.getItem("localdata") || "";
 }
 
-document.addEventListener("DOMContentLoaded", showsaved);
+document.addEventListener("DOMContentLoaded", showsavedtodo);
+
 
