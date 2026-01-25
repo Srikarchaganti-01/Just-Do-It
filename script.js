@@ -47,11 +47,12 @@ licont.addEventListener("click", function (e) {
 });
 
 function save() {
-    localStorage.setItem("data", licont.innerHTML);
+    localStorage.setItem("localdata", licont.innerHTML);
 }
 
 function showsaved() {
-    licont.innerHTML = localStorage.getItem("data") || "";
+    licont.innerHTML = localStorage.getItem("localdata") || "";
 }
 
 document.addEventListener("DOMContentLoaded", showsaved);
+
