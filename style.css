@@ -6,7 +6,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: url(images/bodyh.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -172,7 +171,7 @@ ul li  span:hover{
 
 @media (max-width: 600px) {
  body{
-    background: url(images/bodyh.jpg);
+
     background-size: cover;
  }
   .app{
@@ -218,3 +217,4 @@ ul li  span:hover{
     font-size: 14px;
   }
 }
+
